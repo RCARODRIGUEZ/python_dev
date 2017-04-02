@@ -78,7 +78,7 @@ def create_custom_pkt(ip):
 	# Trying a DDoS
 	#	while(True):
 	#		scapy.all.sendp(pkt)
-except scapy.error, msg:
+	except scapy.error, msg:
 
 		print "Error sending the packet - error type : {0}".format(msg)
 
