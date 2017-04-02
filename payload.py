@@ -100,7 +100,7 @@ if __name__ == "__main__":
 		print "----------------------------------------------------------------------"
 		option = sys.argv[1]
 		if option == "-ip":
-			print sys.argv[2]
+			print type(sys.argv[2])
 			#create_custom_pkt(sys.argv[2])
 			sys.exit()
 		elif len(sys.argv) == 0:
