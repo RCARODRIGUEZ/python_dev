@@ -86,7 +86,7 @@ def Display():
 	version = 0.7
 	print "Payload Manager V{0}".format(version)
 	print "----------------------------------------------------------------------"
-	print " Usage: {0}	[OPTIONS]	IP"
+	print " Usage: {0}	[OPTIONS]	IP".format(sys.argv[0])
 	print " Options:	"
 	print "	-ip	Enter a valid IP address"
 	print "----------------------------------------------------------------------"
