@@ -82,28 +82,27 @@ def create_custom_pkt(ip):
 
 		print "Error sending the packet - error type : {0}".format(e)
 
-# Display----------------------------------------------
-
-def Display():
-	version = 0.6
-	print "Payload Manager V{0}".format(version)
-	print "----------------------------------------------------------------------"
-	print " Usage: {0}	[OPTIONS]	IP"
-	print " Options:	"
-	print "	-ip	Enter a valid IP address"
-	print "----------------------------------------------------------------------"
-	option = sys.argv[1]
-	if option == "-ip":
-		create_custom_pkt(sys.argv[2])
-	elif len(sys.argv) == 0:
-		print "Please enter an option"
-
 
 # Create a custom payload using scapy
 #
 #----------------------------------------------------------------------
 
 if __name__ == "__main__":
+	
+	# Display----------------------------------------------
+	def Display():
+		version = 0.6
+		print "Payload Manager V{0}".format(version)
+		print "----------------------------------------------------------------------"
+		print " Usage: {0}	[OPTIONS]	IP"
+		print " Options:	"
+		print "	-ip	Enter a valid IP address"
+		print "----------------------------------------------------------------------"
+		option = sys.argv[1]
+		if option == "-ip":
+			create_custom_pkt(sys.argv[2])
+		elif len(sys.argv) == 0:
+			print "Please enter an option"
 
 	Display()
 	#create_custom_pkt()
