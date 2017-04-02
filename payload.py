@@ -3,10 +3,12 @@
 '''
 Author: Ricardo Castro Rodrguez CE
 Date: 1.4.17
-Version 0.7
+Version: 0.7.1
 
 Description:
 Analyze the data in a payload
+
+Working on the user interface
 
 Notes:
 
@@ -83,7 +85,7 @@ def create_custom_pkt():
 
 # Display----------------------------------------------
 def Display():
-	version = 0.7
+	version = "0.7.1"
 	print "Payload Manager V{0}".format(version)
 	print "----------------------------------------------------------------------"
 	print " Usage: {0}	[OPTIONS]	IP".format(sys.argv[0])
