@@ -90,6 +90,7 @@ def Display():
 	print " Options:	"
 	print "	-ip	Enter a valid IP address"
 	print "----------------------------------------------------------------------"
+	print "THIS CONTENT IS STILL ON THE WORKS, ITS USING 127.0.0.1 AT THE MOMENT."
 '''
 		option = sys.argv[1]
 		if option == "-ip":
