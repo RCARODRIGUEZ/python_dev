@@ -84,15 +84,15 @@ def create_custom_pkt():
 
 		print "Error sending the packet - error type : {0}".format(msg)
 
-	# Display----------------------------------------------
-	def Display():
-		version = 0.6
-		print "Payload Manager V{0}".format(version)
-		print "----------------------------------------------------------------------"
-		print " Usage: {0}	[OPTIONS]	IP"
-		print " Options:	"
-		print "	-ip	Enter a valid IP address"
-		print "----------------------------------------------------------------------"
+# Display----------------------------------------------
+def Display():
+	version = 0.6
+	print "Payload Manager V{0}".format(version)
+	print "----------------------------------------------------------------------"
+	print " Usage: {0}	[OPTIONS]	IP"
+	print " Options:	"
+	print "	-ip	Enter a valid IP address"
+	print "----------------------------------------------------------------------"
 '''
 		option = sys.argv[1]
 		if option == "-ip":
