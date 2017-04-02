@@ -74,13 +74,13 @@ def create_custom_pkt(ip):
 	print "------------------------------------------------------------"
 
 	try:
-		#scapy.all.sendp(pkt)
+		scapy.all.sendp(pkt)
 	# Trying a DDoS
 	#	while(True):
 	#		scapy.all.sendp(pkt)
-	except e:
+except scapy.error, msg:
 
-		print "Error sending the packet - error type : {0}".format(e)
+		print "Error sending the packet - error type : {0}".format(msg)
 
 
 # Create a custom payload using scapy
