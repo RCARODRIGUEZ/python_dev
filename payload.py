@@ -45,8 +45,10 @@ def sniffer():
 def fragment_payload(data):
 	print "Fragment the data in the payload"
 
-def create_custom_pkt(ip):
+def create_custom_pkt():
 	print "Creat the custom packet"
+	print "Enter IP:"
+	raw_input(ip)
 # Ehter
 	e = scapy.all.Ether()
 	#e.src = "28:CF:E9:4F:D6:AB"	#This is relative
@@ -98,6 +100,7 @@ if __name__ == "__main__":
 		print " Options:	"
 		print "	-ip	Enter a valid IP address"
 		print "----------------------------------------------------------------------"
+'''
 		option = sys.argv[1]
 		if option == "-ip":
 			print type(sys.argv[2])
@@ -105,7 +108,7 @@ if __name__ == "__main__":
 			sys.exit()
 		elif len(sys.argv) == 0:
 			print "Please enter an option"
-
+'''
 	Display()
-	#create_custom_pkt()
+	create_custom_pkt()
 	#sniffer()
