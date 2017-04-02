@@ -3,7 +3,7 @@
 '''
 Author: Ricardo Castro Rodrguez CE
 Date: 1.4.17
-Version 0.5
+Version 0.6
 
 Description:
 Analyze the data in a payload
@@ -39,21 +39,21 @@ def sniffer():
 	packet = s.recvfrom(65565)
 	print packet[0:20]
 	print "------------------------------------------------------------"
-	
+
 # Find a way to read the captured packet
 
 def fragment_payload(data):
 	print "Fragment the data in the payload"
 
-def create_custom_pkt():
+def create_custom_pkt(ip):
 	print "Creat the custom packet"
-# Ehter	
+# Ehter
 	e = scapy.all.Ether()
 	e.src = "28:CF:E9:4F:D6:AB"	#This is relative
 	e.dst = "C0:33:5E:F7:3D:48"	#This is relative
 # IP
 	ip = scapy.all.IP()
-	ip.dst = "10.0.0.50"		#IP address is relative for what you need.
+	ip.dst = ip		#IP address is relative for what you need.
 	ip.proto = "tcp"
 # Packet
 	content = scapy.all.Raw()
@@ -66,7 +66,7 @@ def create_custom_pkt():
 	tcp.dport = 2869
 	tcp.seq = 1000
 
-# Send the packet---------------------------------------------------------	
+# Send the packet---------------------------------------------------------
 
 	pkt = e/ip/content/tcp
 	print "Payload Content---------------------------------------------"
@@ -85,17 +85,26 @@ def create_custom_pkt():
 # Display----------------------------------------------
 
 def Display():
-	version = 0.5
+	version = 0.6
 	print "Payload Manager V{0}".format(version)
 	print "----------------------------------------------------------------------"
+	print " Usage: {0}	[OPTIONS]	IP"
+	print " Options:	"
+	print "	-ip	Enter a valid IP address"
+	print "----------------------------------------------------------------------"
+	option = sys.argv[1]
+	if option == "-ip":
+		create_custom_pkt(sys.argv[2])
+	elif len(sys.argv) == 0:
+		print "Please enter an option"
 
 
 # Create a custom payload using scapy
-# 
+#
 #----------------------------------------------------------------------
 
 if __name__ == "__main__":
 
 	Display()
 	#create_custom_pkt()
-	sniffer()
+	#sniffer()
