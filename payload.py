@@ -88,7 +88,7 @@ def create_custom_pkt(ip):
 #----------------------------------------------------------------------
 
 if __name__ == "__main__":
-	
+
 	# Display----------------------------------------------
 	def Display():
 		version = 0.6
@@ -100,7 +100,9 @@ if __name__ == "__main__":
 		print "----------------------------------------------------------------------"
 		option = sys.argv[1]
 		if option == "-ip":
-			create_custom_pkt(sys.argv[2])
+			print sys.argv[2]
+			#create_custom_pkt(sys.argv[2])
+			sys.exit()
 		elif len(sys.argv) == 0:
 			print "Please enter an option"
 
