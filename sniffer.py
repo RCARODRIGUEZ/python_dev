@@ -11,7 +11,7 @@ import sys
 
 def packet_sniffer():
     print "Begin Sniffer"
-    pkt = sniff(iface = "eth0", proto = "tcp", count = 0, store = 1)
+    pkt = sniff(iface = "eth0", count = 0, store = 1)
     pkt.show()
     print pkt
 
