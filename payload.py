@@ -3,7 +3,7 @@
 '''
 Author: Ricardo Castro Rodrguez CE
 Date: 1.4.17
-Version 0.6
+Version 0.7
 
 Description:
 Analyze the data in a payload
@@ -46,17 +46,14 @@ def fragment_payload(data):
 	print "Fragment the data in the payload"
 
 def create_custom_pkt():
-	ip = "127.0.0.1"
 	print "Creat the custom packet"
-	print "Enter IP:"
-	raw_input(ip)
 # Ehter
 	e = scapy.all.Ether()
-	#e.src = "28:CF:E9:4F:D6:AB"	#This is relative
-	#e.dst = "C0:33:5E:F7:3D:48"	#This is relative
+	e.src = "28:CF:E9:4F:D6:AB"	#This is relative
+	e.dst = "C0:33:5E:F7:3D:48"	#This is relative
 # IP
 	ip = scapy.all.IP()
-	ip.dst = ip		#IP address is relative for what you need.
+	ip.dst = "127.0.0.1"		#IP address is relative for what you need.
 	ip.proto = "tcp"
 # Packet
 	content = scapy.all.Raw()
@@ -82,12 +79,11 @@ def create_custom_pkt():
 	#	while(True):
 	#		scapy.all.sendp(pkt)
 	except scapy.error, msg:
-
 		print "Error sending the packet - error type : {0}".format(msg)
 
 # Display----------------------------------------------
 def Display():
-	version = 0.6
+	version = 0.7
 	print "Payload Manager V{0}".format(version)
 	print "----------------------------------------------------------------------"
 	print " Usage: {0}	[OPTIONS]	IP"
