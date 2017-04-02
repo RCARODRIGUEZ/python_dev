@@ -12,17 +12,9 @@ Notes:
 
 Find a way to create a payload.
 
-Find a way to analythe the data in the payload.
+Find a way to analyze the data in the payload.
 
 Find a way to corectly send the payload, It has a warning at the end.
-
-Performing test with my Xbox:
-
-Xbox Mac Address:
-C0:33:5E:F7:3D:48
-
-Mac MAC Address:
-28:CF:E9:4F:D6:AB
 '''
 
 import scapy.all
@@ -48,6 +40,8 @@ def sniffer():
 	print packet[0:20]
 	print "------------------------------------------------------------"
 	
+# Find a way to read the captured packet
+
 def fragment_payload(data):
 	print "Fragment the data in the payload"
 
@@ -55,11 +49,11 @@ def create_custom_pkt():
 	print "Creat the custom packet"
 # Ehter	
 	e = scapy.all.Ether()
-	e.src = "28:CF:E9:4F:D6:AB"
-	e.dst = "C0:33:5E:F7:3D:48"
+	e.src = "28:CF:E9:4F:D6:AB"	#This is relative
+	e.dst = "C0:33:5E:F7:3D:48"	#This is relative
 # IP
 	ip = scapy.all.IP()
-	ip.dst = "10.0.0.50"
+	ip.dst = "10.0.0.50"		#IP address is relative for what you need.
 	ip.proto = "tcp"
 # Packet
 	content = scapy.all.Raw()
