@@ -84,13 +84,6 @@ def create_custom_pkt():
 
 		print "Error sending the packet - error type : {0}".format(msg)
 
-
-# Create a custom payload using scapy
-#
-#----------------------------------------------------------------------
-
-if __name__ == "__main__":
-
 	# Display----------------------------------------------
 	def Display():
 		version = 0.6
@@ -109,6 +102,13 @@ if __name__ == "__main__":
 		elif len(sys.argv) == 0:
 			print "Please enter an option"
 '''
+
+# Create a custom payload using scapy
+#
+#----------------------------------------------------------------------
+
+if __name__ == "__main__":
+
 	Display()
 	create_custom_pkt()
 	#sniffer()
