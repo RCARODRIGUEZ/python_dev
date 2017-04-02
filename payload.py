@@ -46,6 +46,7 @@ def fragment_payload(data):
 	print "Fragment the data in the payload"
 
 def create_custom_pkt():
+	ip = "127.0.0.1"
 	print "Creat the custom packet"
 	print "Enter IP:"
 	raw_input(ip)
