@@ -74,7 +74,7 @@ def create_custom_pkt(ip):
 	print "------------------------------------------------------------"
 
 	try:
-		scapy.all.sendp(pkt)
+		#scapy.all.sendp(pkt)
 	# Trying a DDoS
 	#	while(True):
 	#		scapy.all.sendp(pkt)
