@@ -49,8 +49,8 @@ def create_custom_pkt(ip):
 	print "Creat the custom packet"
 # Ehter
 	e = scapy.all.Ether()
-	e.src = "28:CF:E9:4F:D6:AB"	#This is relative
-	e.dst = "C0:33:5E:F7:3D:48"	#This is relative
+	#e.src = "28:CF:E9:4F:D6:AB"	#This is relative
+	#e.dst = "C0:33:5E:F7:3D:48"	#This is relative
 # IP
 	ip = scapy.all.IP()
 	ip.dst = ip		#IP address is relative for what you need.
@@ -101,7 +101,7 @@ if __name__ == "__main__":
 		option = sys.argv[1]
 		if option == "-ip":
 			print type(sys.argv[2])
-			#create_custom_pkt(sys.argv[2])
+			create_custom_pkt(sys.argv[2])
 			sys.exit()
 		elif len(sys.argv) == 0:
 			print "Please enter an option"
