@@ -3,10 +3,16 @@
 '''
 Author: Ricardo Castro Rodrguez CE
 Date: 1.4.17
+<<<<<<< HEAD
+Version: 0.7.1
+=======
 Version 0.7.1
+>>>>>>> 838cc85a2e6d6a4421bc85f158a7ed4bee415fb5
 
 Description:
 Analyze the data in a payload
+
+Working on the user interface
 
 Notes:
 
