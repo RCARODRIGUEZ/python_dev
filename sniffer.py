@@ -13,9 +13,12 @@ def packet_sniffer():
     print "Begin Sniffer"
     pkt = scapy.all.sniffer(iface = "eth0", proto = "tcp", count = 0, store = 1)
     pkt.show()
+    print pkt
 
 
 if __name__ == '__main__':
     def display():
         version = 0.1
         print "Packet Sniffer V{0}".format(version)
+        packet_sniffer()
+    display()
