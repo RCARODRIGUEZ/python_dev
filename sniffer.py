@@ -11,8 +11,9 @@ import sys
 
 def packet_sniffer():
     print "Begin Sniffer"
-    pkt = sniff(iface = "eth0", count = 0, store = 1)
+    pkt = sniff(iface = "eth0", count = 1, store = 1)
     pkt.show()
+    print pkt
 
 
 if __name__ == '__main__':
