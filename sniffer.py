@@ -11,7 +11,7 @@ import sys
 
 def packet_sniffer():
     print "Begin Sniffer"
-    pkt = scapy.all.sniffer(iface = "eth0", proto = "tcp")
+    pkt = scapy.all.sniffer(iface = "eth0", proto = "tcp", count = 0, store = 1)
     pkt.show()
 
 
