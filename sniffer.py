@@ -14,6 +14,7 @@ def packet_sniffer():
     pkt = sniff(iface = "eth0", count = 1, store = 1)
     pkt.show()
     print pkt
+    print "------------------"
 
 
 if __name__ == '__main__':
